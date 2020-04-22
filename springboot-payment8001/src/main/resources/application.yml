@@ -1,0 +1,10 @@
+server:
+  port: 80
+
+
+spring:
+  datasource:
+    username: root
+    password: lxhjdqw2
+    url: jdbc:mysql://127.0.0.1:3306/crm?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver

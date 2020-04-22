@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gd.itcarrier.springboot.dao.PreDotaGameDao">
+  <resultMap id="BaseResultMap" type="com.gd.itcarrier.springboot.entity.PreDotaGame">
+    <!--@mbg.generated-->
+    <!--@Table pre_dota_game-->
+    <id column="gid" jdbcType="INTEGER" property="gid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="winer" jdbcType="OTHER" property="winer" />
+    <result column="gamestatus" jdbcType="OTHER" property="gamestatus" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="gametype" jdbcType="OTHER" property="gametype" />
+    <result column="group_name" jdbcType="VARCHAR" property="groupName" />
+    <result column="season" jdbcType="VARCHAR" property="season" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    gid, username, winer, gamestatus, create_time, start_time, end_time, gametype, group_name, 
+    season
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from pre_dota_game
+    where gid = #{gid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from pre_dota_game
+    where gid = #{gid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="gid" keyProperty="gid" parameterType="com.gd.itcarrier.springboot.entity.PreDotaGame" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into pre_dota_game (username, winer, gamestatus, 
+      create_time, start_time, end_time, 
+      gametype, group_name, season
+      )
+    values (#{username,jdbcType=VARCHAR}, #{winer,jdbcType=OTHER}, #{gamestatus,jdbcType=OTHER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{startTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, 
+      #{gametype,jdbcType=OTHER}, #{groupName,jdbcType=VARCHAR}, #{season,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="gid" keyProperty="gid" parameterType="com.gd.itcarrier.springboot.entity.PreDotaGame" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into pre_dota_game
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="username != null">
+        username,
+      </if>
+      <if test="winer != null">
+        winer,
+      </if>
+      <if test="gamestatus != null">
+        gamestatus,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="startTime != null">
+        start_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="gametype != null">
+        gametype,
+      </if>
+      <if test="groupName != null">
+        group_name,
+      </if>
+      <if test="season != null">
+        season,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="winer != null">
+        #{winer,jdbcType=OTHER},
+      </if>
+      <if test="gamestatus != null">
+        #{gamestatus,jdbcType=OTHER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="startTime != null">
+        #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gametype != null">
+        #{gametype,jdbcType=OTHER},
+      </if>
+      <if test="groupName != null">
+        #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="season != null">
+        #{season,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gd.itcarrier.springboot.entity.PreDotaGame">
+    <!--@mbg.generated-->
+    update pre_dota_game
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="winer != null">
+        winer = #{winer,jdbcType=OTHER},
+      </if>
+      <if test="gamestatus != null">
+        gamestatus = #{gamestatus,jdbcType=OTHER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="startTime != null">
+        start_time = #{startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gametype != null">
+        gametype = #{gametype,jdbcType=OTHER},
+      </if>
+      <if test="groupName != null">
+        group_name = #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="season != null">
+        season = #{season,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where gid = #{gid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gd.itcarrier.springboot.entity.PreDotaGame">
+    <!--@mbg.generated-->
+    update pre_dota_game
+    set username = #{username,jdbcType=VARCHAR},
+      winer = #{winer,jdbcType=OTHER},
+      gamestatus = #{gamestatus,jdbcType=OTHER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      start_time = #{startTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
+      gametype = #{gametype,jdbcType=OTHER},
+      group_name = #{groupName,jdbcType=VARCHAR},
+      season = #{season,jdbcType=VARCHAR}
+    where gid = #{gid,jdbcType=INTEGER}
+  </update>
+</mapper>

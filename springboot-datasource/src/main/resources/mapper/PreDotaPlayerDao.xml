@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gd.itcarrier.springboot.dao.PreDotaPlayerDao">
+  <resultMap id="BaseResultMap" type="com.gd.itcarrier.springboot.entity.PreDotaPlayer">
+    <!--@mbg.generated-->
+    <!--@Table pre_dota_player-->
+    <id column="pid" jdbcType="INTEGER" property="pid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="game_id" jdbcType="BIGINT" property="gameId" />
+    <result column="qq" jdbcType="INTEGER" property="qq" />
+    <result column="leader" jdbcType="INTEGER" property="leader" />
+    <result column="teamId" jdbcType="INTEGER" property="teamid" />
+    <result column="intergral" jdbcType="BIGINT" property="intergral" />
+    <result column="result" jdbcType="INTEGER" property="result" />
+    <result column="total" jdbcType="INTEGER" property="total" />
+    <result column="post" jdbcType="VARCHAR" property="post" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    pid, username, game_id, qq, leader, teamId, intergral, `result`, total, post
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from pre_dota_player
+    where pid = #{pid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from pre_dota_player
+    where pid = #{pid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="pid" keyProperty="pid" parameterType="com.gd.itcarrier.springboot.entity.PreDotaPlayer" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into pre_dota_player (username, game_id, qq, 
+      leader, teamId, intergral, 
+      `result`, total, post
+      )
+    values (#{username,jdbcType=VARCHAR}, #{gameId,jdbcType=BIGINT}, #{qq,jdbcType=INTEGER}, 
+      #{leader,jdbcType=INTEGER}, #{teamid,jdbcType=INTEGER}, #{intergral,jdbcType=BIGINT}, 
+      #{result,jdbcType=INTEGER}, #{total,jdbcType=INTEGER}, #{post,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="pid" keyProperty="pid" parameterType="com.gd.itcarrier.springboot.entity.PreDotaPlayer" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into pre_dota_player
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="username != null">
+        username,
+      </if>
+      <if test="gameId != null">
+        game_id,
+      </if>
+      <if test="qq != null">
+        qq,
+      </if>
+      <if test="leader != null">
+        leader,
+      </if>
+      <if test="teamid != null">
+        teamId,
+      </if>
+      <if test="intergral != null">
+        intergral,
+      </if>
+      <if test="result != null">
+        `result`,
+      </if>
+      <if test="total != null">
+        total,
+      </if>
+      <if test="post != null">
+        post,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="gameId != null">
+        #{gameId,jdbcType=BIGINT},
+      </if>
+      <if test="qq != null">
+        #{qq,jdbcType=INTEGER},
+      </if>
+      <if test="leader != null">
+        #{leader,jdbcType=INTEGER},
+      </if>
+      <if test="teamid != null">
+        #{teamid,jdbcType=INTEGER},
+      </if>
+      <if test="intergral != null">
+        #{intergral,jdbcType=BIGINT},
+      </if>
+      <if test="result != null">
+        #{result,jdbcType=INTEGER},
+      </if>
+      <if test="total != null">
+        #{total,jdbcType=INTEGER},
+      </if>
+      <if test="post != null">
+        #{post,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gd.itcarrier.springboot.entity.PreDotaPlayer">
+    <!--@mbg.generated-->
+    update pre_dota_player
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="gameId != null">
+        game_id = #{gameId,jdbcType=BIGINT},
+      </if>
+      <if test="qq != null">
+        qq = #{qq,jdbcType=INTEGER},
+      </if>
+      <if test="leader != null">
+        leader = #{leader,jdbcType=INTEGER},
+      </if>
+      <if test="teamid != null">
+        teamId = #{teamid,jdbcType=INTEGER},
+      </if>
+      <if test="intergral != null">
+        intergral = #{intergral,jdbcType=BIGINT},
+      </if>
+      <if test="result != null">
+        `result` = #{result,jdbcType=INTEGER},
+      </if>
+      <if test="total != null">
+        total = #{total,jdbcType=INTEGER},
+      </if>
+      <if test="post != null">
+        post = #{post,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where pid = #{pid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gd.itcarrier.springboot.entity.PreDotaPlayer">
+    <!--@mbg.generated-->
+    update pre_dota_player
+    set username = #{username,jdbcType=VARCHAR},
+      game_id = #{gameId,jdbcType=BIGINT},
+      qq = #{qq,jdbcType=INTEGER},
+      leader = #{leader,jdbcType=INTEGER},
+      teamId = #{teamid,jdbcType=INTEGER},
+      intergral = #{intergral,jdbcType=BIGINT},
+      `result` = #{result,jdbcType=INTEGER},
+      total = #{total,jdbcType=INTEGER},
+      post = #{post,jdbcType=VARCHAR}
+    where pid = #{pid,jdbcType=INTEGER}
+  </update>
+</mapper>

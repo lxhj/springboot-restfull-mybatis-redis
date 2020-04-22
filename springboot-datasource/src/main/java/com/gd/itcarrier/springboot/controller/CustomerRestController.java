@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.gd.itcarrier.springboot.entity.Customer;
 import com.gd.itcarrier.springboot.service.CustomerService;
-import com.gd.itcarrier.springboot.util.ResultBody;
+import com.solo.springcloud.commons.util.ResultBody;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author yuzg
  *
  */
-@Api(value="web") 
+@Api(value="web")
 @RestController
 public class CustomerRestController {
 
@@ -32,7 +32,7 @@ public class CustomerRestController {
     @RequestMapping(value = "/api/customer/{id}", method = RequestMethod.GET)
     public Customer findOneCustomer(@PathVariable("id") Long id) {
     	Customer customer = customerService.findCustomerById(id);
-    	
+
         return customer;
     }
 

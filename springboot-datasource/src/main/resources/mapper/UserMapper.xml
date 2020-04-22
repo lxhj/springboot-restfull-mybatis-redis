@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gd.itcarrier.springboot.dao.UserDao">
+	<resultMap id="BaseResultMap" type="com.solo.springcloud.commons.entities.User">
+		<result column="id" property="id" />
+		<result column="username" property="username" />
+		<result column="password" property="password" />
+		<result column="create_time" property="create_time" />
+		<result column="create_user_ip" property="create_user_ip" />
+		<result column="active" property="active" />
+	</resultMap>
+
+	<parameterMap id="User" type="com.solo.springcloud.commons.entities.User"/>
+
+	<sql id="Base_Column_List">
+		id, username, password ,create_time , create_user_ip, active
+	</sql>
+
+	<select id="login" parameterType="com.solo.springcloud.commons.entities.User" resultMap="BaseResultMap" resultType="com.solo.springcloud.commons.entities.User">
+		select
+		<include refid="Base_Column_List" />
+		from User
+		where username = #{username}
+		and   password = #{password}
+
+	</select>
+
+	<select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from User
+		where id = #{id}
+	</select>
+
+	<select id="findAllUser" resultMap="BaseResultMap" >
+		select
+		<include refid="Base_Column_List" />
+		from User
+	</select>
+
+	<insert id="saveUser" parameterMap="User" useGeneratedKeys="true" keyProperty="id">
+		insert into
+			User(id,username, password ,create_time , create_user_ip, active)
+		values
+			(#{id},#{username},#{password},#{create_time},#{create_user_ip},#{active})
+	</insert>
+
+	<update id="updateUser" parameterMap="User">
+		update
+			User
+		set
+		<if test="id!=null">
+			id = #{id},
+		</if>
+		<if test="username!=null">
+			username = #{username},
+		</if>
+		<if test="password!=null">
+			password = #{password}
+		</if>
+		<if test="create_time!=null">
+			create_time = #{create_time}
+		</if>
+		<if test="create_user_ip!=null">
+			create_user_ip = #{create_user_ip}
+		</if>
+		<if test="active!=null">
+			active = #{active}
+		</if>
+		where
+			id = #{id}
+	</update>
+
+	<delete id="deleteUser" parameterType="java.lang.Long">
+		delete from
+			User
+		where
+			id = #{id}
+	</delete>
+</mapper>

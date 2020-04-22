@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.gd.itcarrier.springboot.dao.CustomerDao">
-	<resultMap id="BaseResultMap" type="com.gd.itcarrier.springboot.domain.Customer">
+	<resultMap id="BaseResultMap" type="com.gd.itcarrier.springboot.entity.Customer">
 		<result column="id" property="id" />
 		<result column="org_id" property="orgId" />
 		<result column="cust_name" property="custName" />
 		<result column="description" property="description" />
 	</resultMap>
 
-	<parameterMap id="Customer" type="com.gd.itcarrier.springboot.domain.Customer"/>
+	<parameterMap id="Customer" type="com.gd.itcarrier.springboot.entity.Customer"/>
 
 	<sql id="Base_Column_List">
 		id, org_id, cust_name, description

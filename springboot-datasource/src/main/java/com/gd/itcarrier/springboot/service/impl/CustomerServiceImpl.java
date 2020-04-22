@@ -4,8 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.alibaba.fastjson.JSON;
 import com.gd.itcarrier.springboot.dao.CustomerDao;
 import com.gd.itcarrier.springboot.entity.Customer;
 import com.gd.itcarrier.springboot.service.CustomerService;
@@ -23,7 +21,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
     private CustomerDao customerDao;
-    
+
     public Customer findCustomerById(Long id) {
         // 从 数据库中获取信息
         Customer customer = customerDao.findById(id);
