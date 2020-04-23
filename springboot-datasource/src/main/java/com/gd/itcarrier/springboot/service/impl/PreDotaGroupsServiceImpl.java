@@ -3,10 +3,11 @@ package com.gd.itcarrier.springboot.service.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import com.gd.itcarrier.springboot.dao.PreDotaGroupsDao;
-import com.gd.itcarrier.springboot.entity.PreDotaGroups;
+import com.solo.springcloud.commons.entities.PreDotaGroups;
 import com.gd.itcarrier.springboot.service.PreDotaGroupsService;
+
 @Service
-public class PreDotaGroupsServiceImpl implements PreDotaGroupsService{
+public class PreDotaGroupsServiceImpl implements PreDotaGroupsService {
 
     @Resource
     private PreDotaGroupsDao preDotaGroupsDao;
@@ -42,3 +43,4 @@ public class PreDotaGroupsServiceImpl implements PreDotaGroupsService{
     }
 
 }
+

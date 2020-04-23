@@ -1,6 +1,6 @@
 package com.gd.itcarrier.springboot.dao;
 
-import com.gd.itcarrier.springboot.entity.PreDotaGame;
+import com.solo.springcloud.commons.entities.PreDotaGame;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

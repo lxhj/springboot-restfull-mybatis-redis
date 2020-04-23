@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.gd.itcarrier.springboot.dao.CustomerDao;
-import com.gd.itcarrier.springboot.entity.Customer;
+import com.solo.springcloud.commons.entities.Customer;
 import com.gd.itcarrier.springboot.service.CustomerService;
 
 import java.util.List;

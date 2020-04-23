@@ -1,7 +1,8 @@
 package com.gd.itcarrier.springboot.service;
 
-import com.gd.itcarrier.springboot.entity.PreDotaLeague;
-public interface PreDotaLeagueService{
+import com.solo.springcloud.commons.entities.PreDotaLeague;
+
+public interface PreDotaLeagueService {
 
 
     int deleteByPrimaryKey(Integer id);
@@ -17,3 +18,4 @@ public interface PreDotaLeagueService{
     int updateByPrimaryKey(PreDotaLeague record);
 
 }
+

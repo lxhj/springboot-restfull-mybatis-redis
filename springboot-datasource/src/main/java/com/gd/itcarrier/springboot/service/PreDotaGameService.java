@@ -1,7 +1,8 @@
 package com.gd.itcarrier.springboot.service;
 
-import com.gd.itcarrier.springboot.entity.PreDotaGame;
-public interface PreDotaGameService{
+import com.solo.springcloud.commons.entities.PreDotaGame;
+
+public interface PreDotaGameService {
 
 
     int deleteByPrimaryKey(Integer gid);
@@ -17,3 +18,4 @@ public interface PreDotaGameService{
     int updateByPrimaryKey(PreDotaGame record);
 
 }
+

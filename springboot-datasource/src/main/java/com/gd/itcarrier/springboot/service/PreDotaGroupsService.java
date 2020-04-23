@@ -1,7 +1,8 @@
 package com.gd.itcarrier.springboot.service;
 
-import com.gd.itcarrier.springboot.entity.PreDotaGroups;
-public interface PreDotaGroupsService{
+import com.solo.springcloud.commons.entities.PreDotaGroups;
+
+public interface PreDotaGroupsService {
 
 
     int deleteByPrimaryKey(Integer id);
@@ -17,3 +18,4 @@ public interface PreDotaGroupsService{
     int updateByPrimaryKey(PreDotaGroups record);
 
 }
+

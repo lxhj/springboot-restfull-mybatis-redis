@@ -1,6 +1,6 @@
 package com.gd.itcarrier.springboot.dao;
 
-import com.gd.itcarrier.springboot.entity.UserProfile;
+import com.solo.springcloud.commons.entities.UserProfile;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

@@ -3,8 +3,19 @@ server:
 
 
 spring:
+  application:
+    name: cloud-payment-service
   datasource:
     username: root
     password: lxhjdqw2
     url: jdbc:mysql://127.0.0.1:3306/crm?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+eureka:
+  client:
+    #true 表示自己注册
+    registerWithEureka: true
+    #true 集群必须设置true才能配合ribbon使用负载均衡
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/

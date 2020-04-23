@@ -1,7 +1,8 @@
 package com.gd.itcarrier.springboot.service;
 
-import com.gd.itcarrier.springboot.entity.PreDotaPlayer;
-public interface PreDotaPlayerService{
+import com.solo.springcloud.commons.entities.PreDotaPlayer;
+
+public interface PreDotaPlayerService {
 
 
     int deleteByPrimaryKey(Integer pid);
@@ -17,3 +18,4 @@ public interface PreDotaPlayerService{
     int updateByPrimaryKey(PreDotaPlayer record);
 
 }
+

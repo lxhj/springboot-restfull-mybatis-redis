@@ -1,6 +1,6 @@
 package com.gd.itcarrier.springboot.service;
 
-import com.gd.itcarrier.springboot.entity.UserProfile;
+import com.solo.springcloud.commons.entities.UserProfile;
 
 public interface UserProfileService {
 

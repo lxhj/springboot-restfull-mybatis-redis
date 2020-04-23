@@ -2,11 +2,12 @@ package com.gd.itcarrier.springboot.service.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import com.gd.itcarrier.springboot.entity.PreDotaPlayer;
+import com.solo.springcloud.commons.entities.PreDotaPlayer;
 import com.gd.itcarrier.springboot.dao.PreDotaPlayerDao;
 import com.gd.itcarrier.springboot.service.PreDotaPlayerService;
+
 @Service
-public class PreDotaPlayerServiceImpl implements PreDotaPlayerService{
+public class PreDotaPlayerServiceImpl implements PreDotaPlayerService {
 
     @Resource
     private PreDotaPlayerDao preDotaPlayerDao;
@@ -42,3 +43,4 @@ public class PreDotaPlayerServiceImpl implements PreDotaPlayerService{
     }
 
 }
+

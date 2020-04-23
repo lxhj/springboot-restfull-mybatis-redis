@@ -1,4 +1,4 @@
-package com.gd.itcarrier.springboot.entity;
+package com.solo.springcloud.commons.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -7,21 +7,20 @@ public class PreDotaGame implements Serializable {
     private Integer gid;
 
     /**
-    * 游戏创建者
-    */
+     * 游戏创建者
+     */
     private String username;
 
     /**
-    * 胜利方
-    */
+     * 胜利方
+     */
     private Object winer;
 
     /**
-    * 游戏状态。wait为等待玩家加入
-playing 游戏中
-finish 游戏结束
-
-    */
+     * 游戏状态。wait为等待玩家加入
+     * playing 游戏中
+     * finish 游戏结束
+     */
     private Object gamestatus;
 
     private Date createTime;
@@ -35,8 +34,8 @@ finish 游戏结束
     private String groupName;
 
     /**
-    * 赛季
-    */
+     * 赛季
+     */
     private String season;
 
     private static final long serialVersionUID = 1L;

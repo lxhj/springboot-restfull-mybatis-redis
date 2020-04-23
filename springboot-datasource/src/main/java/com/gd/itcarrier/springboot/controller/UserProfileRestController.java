@@ -1,6 +1,6 @@
 package com.gd.itcarrier.springboot.controller;
 
-import com.gd.itcarrier.springboot.entity.UserProfile;
+import com.solo.springcloud.commons.entities.UserProfile;
 import com.gd.itcarrier.springboot.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

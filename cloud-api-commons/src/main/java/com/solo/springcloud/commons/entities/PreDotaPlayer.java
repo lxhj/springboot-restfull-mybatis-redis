@@ -1,9 +1,8 @@
-package com.gd.itcarrier.springboot.entity;
+package com.solo.springcloud.commons.entities;
 
 import java.io.Serializable;
 
 public class PreDotaPlayer implements Serializable {
-
     private Integer pid;
 
     private String username;

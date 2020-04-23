@@ -5,7 +5,7 @@ import com.gd.itcarrier.springboot.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import com.gd.itcarrier.springboot.entity.UserProfile;
+import com.solo.springcloud.commons.entities.UserProfile;
 
 @Service
 public class UserProfileServiceImpl implements UserProfileService {

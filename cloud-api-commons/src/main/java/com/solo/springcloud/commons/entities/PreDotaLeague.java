@@ -1,4 +1,4 @@
-package com.gd.itcarrier.springboot.entity;
+package com.solo.springcloud.commons.entities;
 
 import java.io.Serializable;
 

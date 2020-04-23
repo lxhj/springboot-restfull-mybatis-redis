@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gd.itcarrier.springboot.dao.UserProfileDao">
-  <resultMap id="BaseResultMap" type="com.gd.itcarrier.springboot.entity.UserProfile">
+  <resultMap id="BaseResultMap" type="com.solo.springcloud.commons.entities.UserProfile">
     <!--@mbg.generated-->
     <!--@Table user_profile-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -29,7 +29,7 @@
     delete from user_profile
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.gd.itcarrier.springboot.entity.UserProfile" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.solo.springcloud.commons.entities.UserProfile" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into user_profile (`uid`, avatar, qq,
       team, groupid, telphone,
@@ -38,7 +38,7 @@
       #{team,jdbcType=VARCHAR}, #{groupid,jdbcType=INTEGER}, #{telphone,jdbcType=BIGINT},
       #{city,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.gd.itcarrier.springboot.entity.UserProfile" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.solo.springcloud.commons.entities.UserProfile" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into user_profile
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -88,7 +88,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.gd.itcarrier.springboot.entity.UserProfile">
+  <update id="updateByPrimaryKeySelective" parameterType="com.solo.springcloud.commons.entities.UserProfile">
     <!--@mbg.generated-->
     update user_profile
     <set>
@@ -116,7 +116,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.gd.itcarrier.springboot.entity.UserProfile">
+  <update id="updateByPrimaryKey" parameterType="com.solo.springcloud.commons.entities.UserProfile">
     <!--@mbg.generated-->
     update user_profile
     set `uid` = #{uid,jdbcType=INTEGER},

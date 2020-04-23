@@ -2,7 +2,7 @@ package com.gd.itcarrier.springboot.dao;
 
 import org.apache.ibatis.annotations.Param;
 
-import com.gd.itcarrier.springboot.entity.Customer;
+import com.solo.springcloud.commons.entities.Customer;
 
 import java.util.List;
 

@@ -2,14 +2,14 @@ package com.gd.itcarrier.springboot.service;
 
 import java.util.List;
 
-import com.gd.itcarrier.springboot.entity.Customer;
+import com.solo.springcloud.commons.entities.Customer;
 
 /**
  * 逻辑处理接口类
  * @author yuzg
  */
 public interface CustomerService {
-	
+
     List<Customer> findAllCustomer();
 
     /**
